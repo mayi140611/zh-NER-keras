@@ -26,11 +26,11 @@ def _parse_data(fh):
     #  in windows the new line is '\r\n\r\n' the space is '\r\n' . so if you use windows system,
     #  you have to use recorsponding instructions
 
-    if platform.system() == 'Windows':
-        split_text = '\r\n'
-    else:
-        split_text = '\n'
-
+#     if platform.system() == 'Windows':
+#         split_text = '\r\n'
+#     else:
+#         split_text = '\n'
+    split_text = '\n'
     string = fh.read().decode('utf-8')
     data = [[row.split() for row in sample.split(split_text)] for
             sample in
